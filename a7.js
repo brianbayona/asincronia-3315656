@@ -15,3 +15,8 @@ async function procesarTarea() {  // Esta función es declarada como async, lo q
     // Esta línea no se ejecuta hasta que la promesa se resuelva
     console.log("->", resultado); // Una vez que la promesa se resuelve, se imprime el resultado. En este caso, se mostrará el mensaje "¡Operación completada tras 2 segundos!" después de 2 segundos.
 }
+console.log("1. Antes de llamar a la función async"); // Imprime un mensaje antes de llamar a la función async, indicando que el programa está a punto de iniciar la tarea asíncrona.
+
+procesarTarea(); // Llamamos a la función procesarTarea, que es una función async. Esto iniciará la ejecución de la función, pero no bloqueará el hilo principal, lo que permite que el programa continúe ejecutándose
+
+console.log("2. Después de llamar a la función async (el programa no se detuvo)"); // Imprime un mensaje inmediatamente después de llamar a la función async, demostrando que el programa no se detuvo y que el hilo principal sigue ejecutándose mientras se espera a que la promesa se resuelva.
