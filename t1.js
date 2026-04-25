@@ -26,3 +26,13 @@ async function gestionarCola(lista) { // Función asíncrona para gestionar la c
         const tiempoAtencion = await atenderSolicitud(usuario); // Esperamos a que se atienda cada solicitud antes de continuar con la siguiente
         tiempoTotal += tiempoAtencion; // Acumulamos el tiempo de atención de cada usuario
     }
+    const finProceso = Date.now(); // Marca el fin del proceso para calcular el tiempo total al final
+    
+    console.log("------------------------------------"); // Imprime una línea para separar el resumen final del proceso 
+    console.log(`Proceso finalizado.`); // Imprime un mensaje indicando que el proceso ha finalizado
+    console.log(`Tiempo total acumulado de atención: ${tiempoTotal}ms.`); // Imprime el tiempo total acumulado de atención
+    console.log(`Tiempo real transcurrido (incluyendo overhead): ${finProceso - inicioProceso}ms.`); // Imprime el tiempo real transcurrido desde el inicio hasta el fin del proceso, incluyendo cualquier overhead de ejecución
+}
+
+// Ejecución
+gestionarCola(colaDeSoporte); // Llamamos a la función principal para gestionar la cola de soporte técnico, pasando la lista de usuarios como argumento
