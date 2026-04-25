@@ -14,3 +14,15 @@ const atenderSolicitud = (usuario) => {// Función que simula la atención de un
         }, usuario.tiempo); // El tiempo de atención se determina por el campo "tiempo" del usuario
     });
 };
+// 2. Función principal para procesar la cola
+async function gestionarCola(lista) { // Función asíncrona para gestionar la cola de soporte técnico
+    let tiempoTotal = 0; // Variable para acumular el tiempo total de atención
+    const inicioProceso = Date.now(); // Marca el inicio del proceso para calcular el tiempo total al final
+
+    console.log("--- Iniciando proceso de soporte ---"); // Imprime un mensaje indicando el inicio del proceso
+
+    // Usamos for...of porque respeta el await (forEach NO lo hace)
+    for (const usuario of lista) { // Iteramos sobre cada usuario en la lista de soporte técnico
+        const tiempoAtencion = await atenderSolicitud(usuario); // Esperamos a que se atienda cada solicitud antes de continuar con la siguiente
+        tiempoTotal += tiempoAtencion; // Acumulamos el tiempo de atención de cada usuario
+    }
