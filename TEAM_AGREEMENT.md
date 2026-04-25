@@ -1,4 +1,4 @@
-# Acuerdo de Trabajo del Equipo (Team Agreement)
+## ASINCRONIA (Team Agreement)
 
 Este documento establece las reglas de convivencia, comunicación y estándares de calidad de nuestra célula ágil. Al participar en este repositorio, todos los miembros del equipo aceptamos y nos comprometemos a cumplir estos acuerdos.
 
@@ -6,7 +6,7 @@ Este documento establece las reglas de convivencia, comunicación y estándares 
 | Nombre | Rol | Usuario de GitHub |
 | :--- | :--- | :--- |
 | [Nombre del Aprendiz 1] | Líder (Arquitecto) | `@usuario1` |
-| [Nombre del Aprendiz 2] | Desarrollador | `@usuario2` |
+| [joser andres fuentes riaño] | Desarrollador | `@andrejoser39-dot` |
 | [Nombre del Aprendiz 3] | Desarrollador | `@usuario3` |
 
 ## 2. Canales de Comunicación
@@ -32,3 +32,4 @@ Somos profesionales en formación. Si surgen problemas, actuaremos así:
 
 ---
 > **Firma Digital:** La creación de este archivo y los commits asociados a él representan la firma electrónica de aceptación de todos los integrantes de este equipo.
+joser andres fuentes riaño 
