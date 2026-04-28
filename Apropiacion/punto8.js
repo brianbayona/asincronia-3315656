@@ -116,3 +116,18 @@ async function serie() {
 }
 
 serie();
+
+// PARALELO
+
+async function procesoOrden(o) {
+  await verificar(o);
+  await procesar();
+  await registrar();
+  await notificar();
+}
+
+async function paralelo() {
+  await Promise.all(ordenes.map(procesoOrden));
+}
+
+paralelo();
