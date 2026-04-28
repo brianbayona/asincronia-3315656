@@ -1,4 +1,4 @@
-# Acuerdo de Trabajo del Equipo (Team Agreement)
+## ASINCRONIA (Team Agreement)
 
 Este documento establece las reglas de convivencia, comunicación y estándares de calidad de nuestra célula ágil. Al participar en este repositorio, todos los miembros del equipo aceptamos y nos comprometemos a cumplir estos acuerdos.
 
@@ -32,4 +32,7 @@ Somos profesionales en formación. Si surgen problemas, actuaremos así:
 
 ---
 > **Firma Digital:** La creación de este archivo y los commits asociados a él representan la firma electrónica de aceptación de todos los integrantes de este equipo.
+
+joser andres fuentes riaño 
 Brian Bayona
+
