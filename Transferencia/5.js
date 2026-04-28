@@ -1,4 +1,4 @@
-const { performance } = require("perf_hooks");
+import { performance } from 'node:perf_hooks';
 
 // Simulador de servicios
 function simularServicio(nombre, tiempo, debeFallar = false, data = {}) {
