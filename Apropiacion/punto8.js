@@ -31,3 +31,36 @@ function flujo() {
 }
 
 flujo();
+
+// PROMESAS
+
+function buscarUsuarioP() {
+  return new Promise(res => {
+    setTimeout(() => {
+      console.log("Usuario encontrado (promesa)");
+      res();
+    }, 1000);
+  });
+}
+
+function permisosP() {
+  return new Promise(res => {
+    setTimeout(() => {
+      console.log("Permisos listos (promesa)");
+      res();
+    }, 2000);
+  });
+}
+
+function reporteP() {
+  return new Promise(res => {
+    setTimeout(() => {
+      console.log("Reporte generado (promesa)");
+      res();
+    }, 1000);
+  });
+}
+
+buscarUsuarioP()
+  .then(permisosP)
+  .then(reporteP);
