@@ -131,3 +131,44 @@ async function paralelo() {
 }
 
 paralelo();
+
+// USUARIOS
+
+const usuarios = [101, 102, 103];
+
+function getUser(id) {
+  return new Promise(res => {
+    setTimeout(() => res({ id, nombre: `Usuario ${id}` }), 1200);
+  });
+}
+
+function getSeguridad() {
+  return new Promise(res => {
+    setTimeout(() => res("OK"), 800);
+  });
+}
+
+function getRoles() {
+  return new Promise(res => {
+    setTimeout(() => res(["admin"]), 2000);
+  });
+}
+
+async function procesarUsuario(id) {
+  const user = await getUser(id);
+  const seg = await getSeguridad();
+  const rol = await getRoles();
+
+  return {
+    ...user,
+    seguridad: seg,
+    roles: rol
+  };
+}
+
+async function usuariosRun() {
+  const res = await Promise.all(usuarios.map(procesarUsuario));
+  console.log(res);
+}
+
+usuariosRun();
