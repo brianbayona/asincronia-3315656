@@ -64,3 +64,13 @@ function reporteP() {
 buscarUsuarioP()
   .then(permisosP)
   .then(reporteP);
+
+// ASYNC / AWAIT
+
+async function flujoAsync() {
+  await buscarUsuarioP();
+  await permisosP();
+  await reporteP();
+}
+
+flujoAsync();
