@@ -74,3 +74,45 @@ async function flujoAsync() {
 }
 
 flujoAsync();
+
+// ORDENES EN SERIE
+
+const ordenes = [
+  { id: 1, cliente: "Ana" },
+  { id: 2, cliente: "Luis" }
+];
+
+function delay(ms) {
+  return new Promise(res => setTimeout(res, ms));
+}
+
+async function verificar(o) {
+  await delay(1500);
+  console.log(`Orden ${o.id} verificada`);
+}
+
+async function procesar() {
+  await delay(2000);
+  console.log("Procesada");
+}
+
+async function registrar() {
+  await delay(1000);
+  console.log("Registrada");
+}
+
+async function notificar() {
+  await delay(500);
+  console.log("Notificada");
+}
+
+async function serie() {
+  for (let o of ordenes) {
+    await verificar(o);
+    await procesar();
+    await registrar();
+    await notificar();
+  }
+}
+
+serie();
